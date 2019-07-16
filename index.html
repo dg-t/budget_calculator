@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Budget application calculator</title>
+    <link rel="icon" type="image/png" href="images/wise-16x16.png">
+    <meta name="description" content="Budget application calculator">
+    <meta name="keywords" content="Budget application calculator">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/budget.js"></script>
+</head>
+
+<body>
+
+    <!-- Jumbotron -->
+    <header class="jumbotron shadow mb-0">
+        <h1 class=" mb-4 text-center">Budget Calculator</h1>
+    </header>
+
+    <!-- Container -->
+    <div class="container-fluid px-5 bg-dark text-white">
+        <div class="row mb-5 align-items-baseline">
+            <div class="col-md-6 px-4 my-5">
+                <!-- budget feedback -->
+                <div class="budgetFeedback alert alert-danger">Budget Feedback</div>
+                <!-- budget form -->
+                <form id="formBudget" class=" formBudget text-body bg-light">
+                    <h5>Enter your budget here:</h5>
+                    <div class="form-group">
+                        <input type="number" class="form-control budgetInfo" id="budgetInfo">
+                    </div>
+                    <!-- submit button -->
+                    <button type="submit" class="btn submitBudget" id="submitBudget">Calculate</button>
+                </form>
+            </div>
+            <div class="col-md-6 my-4 px-5">
+                <!-- payment feedback -->
+                <div class="paymentFeedback alert alert-danger">payment Feedback</div>
+                <!-- payment form -->
+                <form id="formPayment" class="text-body bg-light formPayment">
+                    <h5>Add payment description:</h5>
+                    <div class="form-group">
+                        <input type="text" class="form-control paymentInfo" id="paymentInfo">
+                    </div>
+                    <h5>Payment amount:</h5>
+                    <div class="form-group">
+                        <input type="number" class="form-control paymentInfo" id="paymentAmount">
+                    </div>
+                    <!-- submit button -->
+                    <button type="submit" class="btn submitPayment" id="submitPayment">Add payment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mx-auto mb-5 bg-light text-body bgBalance">
+            <!-- app info -->
+            <div class="col-md-4 text-center">
+                <h5 class="sizeText"><u>Budget</u></h5>
+                <h3 class="budget" id="budget">
+                    <span>€</span>
+                    <span id="budgetAmount">0</span>
+                </h3>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5 class="sizeText"><u>Payment</u></h5>
+                <h3 class="payment" id="payment">
+                    <span>€ </span>
+                    <span id="paymentAmount">0</span>
+                </h3>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5 class="sizeText"><u>Current Balance</u></h5>
+                <h3 class="currentBalance" id="currentBalance">
+                    <span>€</span>
+                    <span id="BalanceAmount">0</span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mx-auto my-3">
+                <!-- payment list -->
+                <div class="paymentList mb-5" id="paymentList">
+                    <div class="paymentListInfo d-flex justify-content-center">
+                        <h5 class="mr-5">payment description</h5>
+                        <h5 class="ml-5">payment amount</h5>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer footer">
+        <div class="footer-copyright text-center py-3 bg-secondary text-light">© 2019 Copyright:
+            <a href="#" class="text-body"> Thomas@OpenClassRooms</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
