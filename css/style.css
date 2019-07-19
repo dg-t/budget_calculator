@@ -4,6 +4,10 @@
   display: none;
 }
 
+.showItem {
+  display: block;
+}
+
 /* Budget form */
 .formBudget {
   border: 2px solid rgb(0, 130, 0);
@@ -67,4 +71,17 @@
     border: 2px solid rgb(67, 183, 245);
     border-radius: 10px;
     padding: 5px;
+}
+
+/* Colors js */
+.showGreen {
+  color: green;
+}
+
+.showRed {
+  color: red;
+}
+
+.showBlue {
+  color: rgb(67, 183, 245);
 }
